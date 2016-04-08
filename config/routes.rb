@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
 
+
+  get 'conversations', to: 'conversations#index'
+  get 'conversations/new', to: 'conversations#new', as: 'new_conversation'
+  post 'conversations', to: 'conversations#create'
+  get 'conversations/:id', to: 'conversations#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
